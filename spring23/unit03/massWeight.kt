@@ -6,5 +6,4 @@ fun main(args : Array<String>) {
     println("Your object weighs $weight Newtons.")
     if(weight > 1000){println("Your object is too heavy.")}
     else if(weight < 10){println("Your object is too light.")}
-    else{println("Your object's weight is optimal.")}
-    }
+}
