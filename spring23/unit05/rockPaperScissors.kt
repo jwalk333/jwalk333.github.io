@@ -23,7 +23,7 @@ fun getUserChoice(): Int {
 fun printResult(userChoice: Int, computerChoice: Int) {
     if (userChoice == computerChoice)
         print("Tie game.")
-    else if ((userChoice == 0 && computerChoice == 2) || (userChoice == 1 && computerChoice == 0) || (userChoice == 2 && computerChoice == 1))
+    else if ((userChoice == 1 && computerChoice == 3) || (userChoice == 2 && computerChoice == 1) || (userChoice == 3 && computerChoice == 2))
         print("You Won!")
     else
         print("You Lose.")
