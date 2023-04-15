@@ -6,16 +6,16 @@ fun main (){
 }
 
 fun magicResponses (){
-    val responses = arrayOf("Yes, of course!", "You can count on it.", "Ask me later.", "I’m not sure.", "I don’t think so.", "Without a doubt, no.")
+    val responses = arrayOf("Yes, of course!", "You can count on it.", "Undoubtedly, yes.", "Ask me later.", "I’m not sure.", "I don’t think so.", "Without a doubt, no.", "I cannot find the answer for you.","The answer is foggy at the moment.", "Absolutely, no")
     val min = 0
-    val max = 5
+    val max = 9
     val randomNumber = (Math.random() * (max - min + 1)).toInt() + min
     val result = responses[randomNumber]
     println(result)
 }
 
 fun replay (){
-    println("Do you have another question? Y or N: ")
+    println("Do you have another questions? Y or N: ")
     val userResponse = readLine()!!
     if(userResponse == "Y"){
         main()
