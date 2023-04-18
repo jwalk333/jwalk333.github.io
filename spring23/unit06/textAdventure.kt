@@ -20,7 +20,9 @@ fun main (){
 
 fun intro (){
     println("You have entered a haunted castle. To make it out you must find the Balcony.")
+    println("To navigate, enter N for North, S for South, E for East and W for West.")
 }
+
 fun getUserChoice (): String {
     println("What is your next move: N, S, E, or W?")
     val userChoice = readLine()!!.lowercase()
