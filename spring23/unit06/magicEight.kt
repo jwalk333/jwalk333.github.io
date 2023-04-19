@@ -16,11 +16,11 @@ fun magicResponses (){
 
 fun replay (){
     println("Do you have another questions? Y or N: ")
-    val userResponse = readLine()!!
-    if(userResponse == "Y"){
+    val userResponse = readLine()!!.lowercase()
+    if(userResponse == "y"){
         main()
     }
-    else if(userResponse == "N"){
+    else if(userResponse == "n"){
         println("See you next time!")
     }
     else {
