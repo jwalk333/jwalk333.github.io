@@ -1,27 +1,32 @@
 fun main() {
     printRules()
-    val userChoice = getUserChoice()
-    val computerChoice = getComputerChoice()
-    if(getComputerChoice() == 1){
-        println("Computer chose: Rock.")
-    }
-    else if(getComputerChoice() == 2){
-        println("Computer chose: Paper.")
-    }
-    else{
-        println("Computer chose: Scissors.")
-    }
-    printResult(userChoice, computerChoice)
+    playGame()
 }
 
+fun playGame (){
+    val userChoice = getUserChoice()
+    val computerChoice = getComputerChoice()
+    when(computerChoice) {
+        1 -> println("Computer chose Rock.")
+        2 -> println("Computer chose Paper.")
+        3 -> println("Computer chose Scissors.")
+        else -> println("error")
+    }
+    printResult(userChoice, computerChoice)
+    if(userChoice == computerChoice){
+        replay()
+    }
+}
 fun getComputerChoice(): Int {
-    return (Math.random() * (3 - 1 + 1)).toInt() + 1
+    val min = 1
+    val max = 3
+    return (Math.random() * (max - min + 1)).toInt() + min
 }
 
 fun printRules() {
     println("Let's play Rock Paper Scissors")
     println("The rules are:\n1. Rock beats Scissors\n2. Scissors beats Paper\n3. Paper beats Rock")
-    println("1 is Rock\n2 is Paper\n3 is Scissor")
+    println("1 is Rock\n2 is Paper\n3 is Scissors")
 }
 
 fun getUserChoice(): Int {
@@ -31,13 +36,12 @@ fun getUserChoice(): Int {
 
 fun replay(){
     println("Rematch!")
-    getUserChoice()
+    playGame()
 }
 
 fun printResult(userChoice: Int, computerChoice: Int) {
     if (userChoice == computerChoice) {
         print("Tie game.")
-        replay()
     }
     else if ((userChoice == 1 && computerChoice == 3) || (userChoice == 2 && computerChoice == 1) || (userChoice == 3 && computerChoice == 2)) {
         print("You Won!")
