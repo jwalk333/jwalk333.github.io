@@ -34,9 +34,9 @@ fun moveNorth() {
         0 -> currentRoom = 3
         1 -> currentRoom = 4
         2 -> currentRoom = 5
-        3 -> println("error")
+        3 -> println("There is no way out this direction.")
         4 -> currentRoom = 6
-        5 -> println("error")
+        5 -> println("You can't move there.")
     }
 }
 
